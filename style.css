@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-container {
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column,
+.right-column {
+    width: 48%;
+}
+
+.left-column p,
+.right-column p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+select {
+    width: 100%;
+    height: 3em;
+    border-radius: 5px;
+    margin-top: 11px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px; 
+}
+
+.label {
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="range"],
+select {
+    width: 100%;
+    height: 3em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+hr {
+    margin: 20px 0;
+    border-top: 2px solid #A9A9A9; 
+}
+
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+span {
+    margin-top: 10px;
+}
+
+.leasing-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.leasing-details .left-column {
+    width: 48%;
+    padding-right: 10px;
+}
+
+.leasing-details .right-column {
+    width: 48%;
+    padding-left: 10px;
+    border-left: 2px solid #A9A9A9;
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 90%; 
+    }
+    
+    .content-container {
+        flex-direction: column; 
+    }
+    
+    .left-column, .right-column {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+    
+    select, input[type="number"], input[type="range"], input[type="text"] {
+        width: 100%; 
+    }
+    
+    .leasing-details .left-column, .leasing-details .right-column {
+        width: 100%; 
+        padding: 0; 
+        border-left: none; 
+    }
+    
+    .leasing-details {
+        flex-direction: column; 
+    }
+}

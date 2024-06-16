@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Car Leasing Calculator</h1>
+        <div class="content-container">
+            <div class="left-column">
+                <p class="label">
+                    Car Type:
+                    <select id="condition">
+                        <option value="1">Brand New</option>
+                        <option value="2">Used</option>
+                    </select>
+                </p>
+                <p class="label">
+                    Car value (€10,000-€200,000):
+                    <div class="input-group">
+                        <input type="number" id="carValueText" value="10000" min="10000" max="200000" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="range" id="carValueRange" min="10000" max="200000" step="1000" value="10000">
+                    </div>
+                </p>
+            </div>
+            <div class="right-column">
+                <p class="label">
+                    Lease Period (months):
+                        <select id="leaseText">
+                            <option value="12">12 months</option>
+                            <option value="24">24 months</option>
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60">60 months</option>
+                        </select>
+                </p>
+                <p class="label">
+                    Down Payment (10% - 50%):
+                    <div class="input-group">
+                        <input type="number" id="downPaymentText" value="10" min="10" max="50" step="5">
+                    </div>
+                    <div class="input-group">
+                        <input type="range" id="downPaymentInput" min="10" max="50" step="5" value="10">
+                    </div>
+                </p>
+            </div>
+        </div>
+        <hr> 
+        <h2>Leasing Details</h2> 
+        <div class="leasing-details">
+            <div class="left-column">
+                <p class="label">Total Leasing Cost: <span id="totalLeasingCost">€0.00</span></p>
+                <p class="label">Down Payment: <span id="downPaymentValue">€1000</span></p>
+            </div>
+            <div class="right-column">
+                <p class="label">Monthly Installment: <span id="monthlyInstallment">€0.00</span></p>
+                <p class="label">Interest Rate: <span id="interestRate">2.99%</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
